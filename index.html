@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АНКЕТА</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/4service_Group.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="page-content">
+            <form class="form-valid" action="#">
+                <div class="question-block">
+                    <div class="question-name">
+                        1. Как часто Вы посещаете наши торговые точки?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-1" id="q-1-1" value="Очень часто, несколько раз в неделю">
+                            <label for="q-1-1">Очень часто, несколько раз в неделю</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-1" id="q-1-2" value="Регулярно, один раз в неделю">
+                            <label for="q-1-2">Регулярно, один раз в неделю</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-1" id="q-1-3" value="Несколько раз в месяц">
+                            <label for="q-1-3">Несколько раз в месяц</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-1" id="q-1-4" value="Время от времени, примерно раз в месяц">
+                            <label for="q-1-4">Время от времени, примерно раз в месяц</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-1" id="q-1-5" value="Редко, пару раз в год">
+                            <label for="q-1-5">Редко, пару раз в год</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-1" id="q-1-6" value="Не посещаю">
+                            <label for="q-1-6">Не посещаю</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        2. Какая из перечисленной продукции Вам нравятся больше всего в наших магазинах?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-2" id="q-2-1" value="Одежда (футболки, кепки, худи и т.д.)">
+                            <label for="q-2-1">Одежда (футболки, кепки, худи и т.д.)</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-2" id="q-2-2" value="Сувениры на удачу (брелоки, зажимы т.д.)">
+                            <label for="q-2-2">Сувениры на удачу (брелоки, зажимы т.д.)</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-2" id="q-2-3" value="Ювелирные изделия">
+                            <label for="q-2-3">Ювелирные изделия</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-2" id="q-2-4" value="Ничего">
+                            <label for="q-2-4">Ничего</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        3. Что из этого Вы сейчас хотели бы купить?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-3" id="q-3-1" value="Одежда (футболки, кепки, худи и т.д.)">
+                            <label for="q-3-1">Одежда (футболки, кепки, худи и т.д.)</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-3" id="q-3-2" value="Сувениры на удачу (брелоки, зажимы т.д.)">
+                            <label for="q-3-2">Сувениры на удачу (брелоки, зажимы т.д.)</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-3" id="q-3-3" value="Ювелирные изделия">
+                            <label for="q-3-3">Ювелирные изделия</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-3" id="q-3-4" value="Ничего">
+                            <label for="q-3-4">Ничего</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        4. Что из нелотерейной продукции вы бы хотели видеть в нашем ассортименте в будущем (из того,
+                        что не представлено сейчас)?
+                    </div>
+                    <div class="question-open">
+                        <textarea class="textara-resize" name="q-4" placeholder="Напишите Ваш ответ здесь, пожалуйста"
+                            data-reqired
+                            rows="1"></textarea>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, заполните поле
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        5. Какую сумму вы готовы потратить на сопутствующие товары?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-5" id="q-5-1" value="От 100 до 500 рублей">
+                            <label for="q-5-1">От 100 до 500 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-5" id="q-5-2" value="От 500 до 1000 рублей">
+                            <label for="q-5-2">От 500 до 1000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-5" id="q-5-3" value="От 100 до 3000 рублей">
+                            <label for="q-5-3">От 100 до 3000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-5" id="q-5-4" value="От 3000 до 5000 рублей">
+                            <label for="q-5-4">От 3000 до 5000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-5" id="q-5-5" value="От 5000 до 10000 рублей">
+                            <label for="q-5-5">От 5000 до 10000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-5" id="q-5-6" value="Свыше 10000 рублей">
+                            <label for="q-5-6">Свыше 10000 рублей</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        6. Увлекаетесь ли вы коллекционированием?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-6" id="q-6-1" value="Да">
+                            <label for="q-6-1">Да</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-6" id="q-6-2" value="Нет">
+                            <label for="q-6-2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        7. Есть ли у вас любимое число?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-7-1" type="radio" name="q-7" id="q-7-1"
+                                value="Да">
+                            <label for="q-7-1">Да</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-7-1" type="radio" name="q-7" id="q-7-2"
+                                value="Нет">
+                            <label for="q-7-2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-question" id="hidden-7-1">
+                        <div class="hidden-name">
+                            Расскажете какое? <span class="smile"></span>
+                        </div>
+                        <div class="hidden-value">
+                            <input  class="hidden-input" type="text" name="q-7-3">
+                        </div>
+                        <div class="error-text">
+                            Пожалуйста, заполните поле
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        8. Верите ли вы в талисманы, приносящие удачу?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-8" id="q-8-1" value="Да">
+                            <label for="q-8-1">Да</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-8" id="q-8-2" value="Нет">
+                            <label for="q-8-2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        9. Как думаете, есть ли связь между лотереями и спортом? (используем шкалу Лайкерта)
+                    </div>
+                    <div class="radio-wrapper">
+                        <div class="radio-cont">
+                            <input type="radio" name="q-9" id="q-9-1" value="1">
+                            <label for="q-9-1">
+                                <div class="number">1</div>
+                                <div class="text">
+                                    Точно Нет
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-cont">
+                            <input type="radio" name="q-9" id="q-9-2" value="2">
+                            <label for="q-9-2">
+                                <div class="number">2</div>
+                                <div class="text">
+                                    Скорее Нет
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-cont">
+                            <input type="radio" name="q-9" id="q-9-3" value="3">
+                            <label for="q-9-3">
+                                <div class="number">3</div>
+                                <div class="text">
+                                    Затрудняюсь ответить
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-cont">
+                            <input type="radio" name="q-9" id="q-9-4" value="4">
+                            <label for="q-9-4">
+                                <div class="number">4</div>
+                                <div class="text">
+                                    Скорее Да
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-cont">
+                            <input type="radio" name="q-9" id="q-9-5" value="5">
+                            <label for="q-9-5">
+                                <div class="number">5</div>
+                                <div class="text">
+                                    Точно Да
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        10. Какой ваш любимый вид спорта для занятий и просмотра?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-1"
+                                value="Футбол">
+                            <label for="q-10-1">Футбол</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-2"
+                                value="Хоккей">
+                            <label for="q-10-2">Хоккей</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-3"
+                                value="Плаванье">
+                            <label for="q-10-3">Плаванье</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-4"
+                                value="Бокс">
+                            <label for="q-10-4">Бокс</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-5"
+                                value="Биатлон">
+                            <label for="q-10-5">Биатлон</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-6"
+                                value="Теннис">
+                            <label for="q-10-6">Теннис</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-7"
+                                value="Легкая атлетика">
+                            <label for="q-10-7">Легкая атлетика</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-8"
+                                value="Воллейбол">
+                            <label for="q-10-8">Воллейбол</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-9"
+                                value="Баскетбол">
+                            <label for="q-10-9">Баскетбол</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-10"
+                                value="Скачки">
+                            <label for="q-10-10">Скачки</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-11"
+                                value="Фигурное катание">
+                            <label for="q-10-11">Фигурное катание</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-12"
+                                value="Гандбол">
+                            <label for="q-10-12">Гандбол</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-13"
+                                value="Шахматы">
+                            <label for="q-10-13">Шахматы</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-14"
+                                value="Киберспорт">
+                            <label for="q-10-14">Киберспорт</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-10-1" type="radio" name="q-10" id="q-10-15"
+                                value="Другое">
+                            <label for="q-10-15">Другое </label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-question" id="hidden-10-1">
+                        <div class="hidden-value">
+                            <div class="question-open">
+                                <textarea class="textara-resize hidden-input" name="q-4"
+                                    placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="error-text">
+                            Пожалуйста, заполните поле
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        11. Готовы ли Вы покупать для себя/дарить элементы одежды и аксессуары на удачу (например:
+                        футболка, кепка, худи, рюкзак и т.д.)
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-11" id="q-11-1" value="Да">
+                            <label for="q-11-1">Да</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-11" id="q-11-2" value="Нет">
+                            <label for="q-11-2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        12. Готовы ли Вы покупать ювелирные изделия в наших магазинах?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-12" id="q-12-1" value="Да">
+                            <label for="q-12-1">Да</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-12" id="q-12-2" value="Нет">
+                            <label for="q-12-2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        13. Если да, то в пределах какой суммы?
+                    </div>
+                    <div class="question-list">
+                        <div class="list-item">
+                            <input type="radio" name="q-13" id="q-13-1" value="От 500 до 1000 рублей">
+                            <label for="q-13-1">От 500 до 1000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-13" id="q-13-2" value="От 100 до 3000 рублей">
+                            <label for="q-13-2">От 100 до 3000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-13" id="q-13-3" value="От 3000 до 5000 рублей">
+                            <label for="q-13-3">От 3000 до 5000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-13" id="q-13-4" value="От 5000 до 10000 рублей">
+                            <label for="q-13-4">От 5000 до 10000 рублей</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-13" id="q-13-5" value="Свыше 10000 рублей">
+                            <label for="q-13-5">Свыше 10000 рублей</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="submit-block">
+                    <button type="submit" class="valid-form-send btn-submit">
+                        Отправить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

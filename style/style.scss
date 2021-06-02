@@ -1,0 +1,438 @@
+$fontFamily: 'Montserrat', sans-serif;
+$circleCOlor: #000;
+$textColor: #333;
+$radiocolor1: #BA1417;
+$radiocolor2: #F63030;
+$radiocolor3: #FFA400;
+$radiocolor4: #00E355;
+$radiocolor5: #008811;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//rest css
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+  
+  /* HTML5 display-role reset for older browsers */
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+  
+  body {
+    line-height: 1; }
+  
+  ol, ul {
+    list-style: none; }
+  
+  blockquote, q {
+    quotes: none; }
+  
+  blockquote {
+    &:before, &:after {
+      content: '';
+      content: none; } }
+  
+  q {
+    &:before, &:after {
+      content: '';
+      content: none; } }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+//scroll
+* {
+    box-sizing: border-box;
+    box-sizing: border-box;
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $circleCOlor;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: $fontFamily;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    .header {
+        padding: 15px 0px 35px;
+        .logo {
+            width: 100px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .page-content {
+        .question-block {
+            padding-bottom: 35px;
+            &.has-error {
+                .question-name {
+                    color: #CD0800;
+                }
+                .error-text {
+                    max-height: 40px;
+                    opacity: 1;
+                }
+            }
+            .error-text {
+                pointer-events: none;
+                max-height: 0px;
+                overflow: hidden;
+                transition: all 0.3s ease-in;
+                font-size: 14px;
+                line-height: 18px;
+                color: #CD0800;
+                padding-top: 15px;
+                opacity: 0;
+            }
+            .question-name {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 600;
+                padding-bottom: 15px;
+                color: $textColor;
+                transition: color 0.3s ease-in;
+            }
+            .question-list {
+                padding-left: 15px;
+                .list-item {
+                    padding-bottom: 5px;
+                    input[type=radio],
+                    input[type=checkbox] {
+                        display: none;
+                        &:checked {
+                            & ~ label {
+                                &::before {
+                                    background: $circleCOlor;
+                                }
+                            }
+                        }
+                        & ~ label {
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: $textColor;
+                            outline: none;
+                            &::before {
+                                content: "";
+                                width: 10px;
+                                height: 10px;
+                                display: inline-block;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                border: 1px solid $circleCOlor;
+                                transition: all 0.3s ease-in;
+                            }
+                        }
+                    }
+                }
+            }
+            input[type=text] {
+                padding: 5px 10px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $circleCOlor;
+                width: 100%;
+                font-size: 14px;
+                line-height: 18px;
+                color: $textColor;
+            }
+            .textara-resize {
+                resize: none;
+                padding: 5px 10px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $circleCOlor;
+                width: 100%;
+                font-size: 14px;
+                line-height: 18px;
+                color: $textColor;
+                min-height: 30px;
+                &::-webkit-scrollbar-track {
+                    border-radius: 0px;
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar {
+                    width: 0px;
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: transparent;
+                }
+            }
+            .smile-icon {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url(./../img/happy.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .hidden-question {
+                padding-top: 25px;
+                display: none;
+                &.has-error {
+                    .hidden-name {
+                        color: #CD0800;
+                    }
+                    .error-text {
+                        max-height: 40px;
+                        opacity: 1;
+                    }
+                }
+                .error-text {
+                    pointer-events: none;
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: all 0.3s ease-in;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #CD0800;
+                    padding-top: 15px;
+                    opacity: 0;
+                }
+                .hidden-name {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    padding-bottom: 15px;
+                    color: $textColor;   
+                }
+            }
+            .radio-wrapper {
+                padding-top: 15px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                .radio-cont {
+                    max-width: 20%;
+                    width: 20%;
+                    padding: 5px;
+                    input[type=radio] {
+                        display: none;
+                    }
+                    label {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        &::before {
+                            display: none;
+                        }
+                        cursor: pointer;
+                        .number {
+                            font-family: $fontFamily;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height: 15px;
+                            width: 25px;
+                            height: 25px;
+                            display: flex;
+                            align-content: center;
+                            justify-content: center;
+                            border: 1px solid #ffffff;
+                            border-radius: 50%;
+                            padding: 5px;
+                            transition: all 0.3s ease-in;
+                        }
+                        .text {
+                            font-family: $fontFamily;
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: $textColor;
+                            text-align: center;
+                            padding-top: 10px;
+                            max-width: 220px;
+                        }
+                    }
+                    &:nth-child(1){
+                        input[type=radio]:checked + label {
+                            .number {
+                                border-color: $radiocolor1;
+                                color: #ffffff;
+                                background-color: $radiocolor1;
+                            }
+                        }
+                        label .number {
+                            border-color: $radiocolor1;
+                            color: $radiocolor1;
+                            cursor: pointer;
+                        }
+                    }
+                    &:nth-child(2){
+                        input[type=radio]:checked + label {
+                            .number {
+                                border-color: $radiocolor2;
+                                color: #ffffff;
+                                background-color: $radiocolor2;
+                            }
+                        }
+                        label .number {
+                            border-color: $radiocolor2;
+                            color: $radiocolor2;
+                        }
+                    }
+                    &:nth-child(3){
+                        input[type=radio]:checked + label {
+                            .number {
+                                border-color: $radiocolor3;
+                                color: #ffffff;
+                                background-color: $radiocolor3;
+                            }
+                        }
+                        label .number {
+                            border-color: $radiocolor3;
+                            color: $radiocolor3;
+                        }
+                    }
+                    &:nth-child(4){
+                        input[type=radio]:checked + label {
+                            .number {
+                                border-color: $radiocolor4;
+                                color: #ffffff;
+                                background-color: $radiocolor4;
+                            }
+                        }
+                        label .number {
+                            border-color: $radiocolor4;
+                            color: $radiocolor4;
+                        }
+                    }
+                    &:nth-child(5){
+                        input[type=radio]:checked + label {
+                            .number {
+                                border-color: $radiocolor5;
+                                color: #ffffff;
+                                background-color: $radiocolor5;
+                            }
+                        }
+                        label .number {
+                            border-color: $radiocolor5;
+                            color: $radiocolor5;
+                        }
+                    }
+    
+                }
+            }
+        }
+        .submit-block {
+            text-align: center;
+            .btn-submit {
+                display: inline-block;
+                font-family: $fontFamily;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 14px;
+                color: #FFFFFF;
+                padding: 15px 35px;
+                background: $circleCOlor;
+                border: none;
+                border-radius: 20px;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .container .page-content .question-block .question-name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .container .page-content .question-block {
+        padding-bottom: 25px;
+    }
+    .container .page-content .question-block .hidden-question {
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container .page-content .question-block .question-list {
+        padding-left: 0px;
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .container .page-content .question-block .question-name,
+    .container .page-content .question-block .hidden-question .hidden-name {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .container .page-content .question-block .textara-resize,
+    .container .page-content .question-block .question-list .list-item input[type=radio] ~ label,
+    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label,
+    .container .page-content .question-block .radio-wrapper .radio-cont label .text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .container .page-content .question-block {
+        padding-bottom: 15px;
+    }
+    .container .page-content .question-block .hidden-question .hidden-name {
+        padding-bottom: 5px;
+    }
+    .container .page-content .question-block .radio-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        .radio-cont {
+            min-width: 33.3%;
+        }
+    }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+    .container {
+        min-height: 100vh;
+        min-width: 100%;
+        background: #333;
+    }
+    .container .page-content .question-block .textara-resize,
+    .container .page-content .question-block .question-list .list-item input[type=radio] ~ label,
+    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label,
+    .container .page-content .question-block .radio-wrapper .radio-cont label .text,
+    .container .page-content .question-block .question-name,
+    .container .page-content .question-block .hidden-question .hidden-name {
+        color: #ffffff;
+    }
+    .container .page-content .question-block input[type=text],
+    .container .page-content .question-block .textara-resize {
+        background: #333;
+        border-color: #fff;
+    }
+    .container .page-content .question-block .question-list .list-item input[type=radio] ~ label::before,
+    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label::before {
+        border-color: #ffffff;
+    }
+    .container .page-content .question-block .question-list .list-item input[type=radio]:checked ~ label::before,
+    .container .page-content .question-block .question-list .list-item input[type=checkbox]:checked ~ label::before {
+        background: #ffffff;
+    }
+    .container .page-content .submit-block .btn-submit {
+        background: #ffffff;
+        color: #000;
+    }
+}
