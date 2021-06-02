@@ -98,8 +98,8 @@ table {
 
 .container .page-content input[type=radio] ~ label,
 .container .page-content input[type=checkbox] ~ label {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: #333;
   outline: none;
 }
@@ -136,7 +136,7 @@ table {
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #CD0800;
   padding-top: 15px;
@@ -144,8 +144,8 @@ table {
 }
 
 .container .page-content .question-block .question-name {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 26px;
   font-weight: 600;
   padding-bottom: 15px;
   color: #333;
@@ -155,6 +155,42 @@ table {
 
 .container .page-content .question-block .question-list {
   padding-left: 15px;
+}
+
+.container .page-content .question-block .question-list.flex-33 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .page-content .question-block .question-list.flex-33 > div {
+  width: 33.3%;
+}
+
+.container .page-content .question-block .question-list.flex-50 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .page-content .question-block .question-list.flex-50 > div {
+  width: 50%;
 }
 
 .container .page-content .question-block .question-list .list-item {
@@ -167,7 +203,7 @@ table {
   border: none;
   border-bottom: 1px solid #000;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #333;
 }
@@ -179,7 +215,7 @@ table {
   border: none;
   border-bottom: 1px solid #000;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #333;
   min-height: 30px;
@@ -229,7 +265,7 @@ table {
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #CD0800;
   padding-top: 15px;
@@ -237,8 +273,8 @@ table {
 }
 
 .container .page-content .question-block .hidden-question .hidden-name {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: 600;
   padding-bottom: 15px;
   color: #333;
@@ -266,7 +302,7 @@ table {
   width: 20%;
   min-width: 20%;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #333;
   text-align: center;
@@ -300,7 +336,7 @@ table {
   width: 20%;
   min-width: 20%;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #333;
   text-align: center;
@@ -324,8 +360,8 @@ table {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 16px;
   color: #FFFFFF;
   padding: 15px 35px;
   background: #000;
@@ -339,6 +375,9 @@ table {
   .container .page-content .question-block .question-name {
     font-size: 16px;
     line-height: 18px;
+  }
+  .container .page-content .question-block .question-list.flex-33 .list-item, .container .page-content .question-block .question-list.flex-50 .list-item {
+    width: 100%;
   }
 }
 
