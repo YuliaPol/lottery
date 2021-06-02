@@ -80,6 +80,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         }
     }
     .page-content {
+        input[type=radio],
+        input[type=checkbox] {
+            display: none;
+            &:checked {
+                & ~ label {
+                    &::before {
+                        background: $circleCOlor;
+                    }
+                }
+            }
+            & ~ label {
+                font-size: 14px;
+                line-height: 18px;
+                color: $textColor;
+                outline: none;
+                &::before {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    border: 1px solid $circleCOlor;
+                    transition: all 0.3s ease-in;
+                }
+            }
+        }
         .question-block {
             padding-bottom: 35px;
             &.has-error {
@@ -114,33 +141,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                 padding-left: 15px;
                 .list-item {
                     padding-bottom: 5px;
-                    input[type=radio],
-                    input[type=checkbox] {
-                        display: none;
-                        &:checked {
-                            & ~ label {
-                                &::before {
-                                    background: $circleCOlor;
-                                }
-                            }
-                        }
-                        & ~ label {
-                            font-size: 14px;
-                            line-height: 18px;
-                            color: $textColor;
-                            outline: none;
-                            &::before {
-                                content: "";
-                                width: 10px;
-                                height: 10px;
-                                display: inline-block;
-                                border-radius: 50%;
-                                margin-right: 10px;
-                                border: 1px solid $circleCOlor;
-                                transition: all 0.3s ease-in;
-                            }
-                        }
-                    }
                 }
             }
             input[type=text] {
@@ -216,120 +216,53 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                     color: $textColor;   
                 }
             }
-            .radio-wrapper {
-                padding-top: 15px;
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                .radio-cont {
-                    max-width: 20%;
-                    width: 20%;
-                    padding: 5px;
-                    input[type=radio] {
-                        display: none;
-                    }
-                    label {
+            .scale-wrapper {
+                width: 100%;
+                .label-row {
+                    width: 100%;
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: stretch;
+                    background: #e2e2e2;
+                    .label-item {
+                        width: 20%;
+                        min-width: 20%;
+                        font-family: $fontFamily;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: $textColor;
+                        text-align: center;
+                        padding: 10px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        flex-direction: column;
-                        &::before {
-                            display: none;
-                        }
-                        cursor: pointer;
-                        .number {
-                            font-family: $fontFamily;
-                            font-style: normal;
-                            font-weight: normal;
-                            font-size: 15px;
-                            line-height: 15px;
-                            width: 25px;
-                            height: 25px;
-                            display: flex;
-                            align-content: center;
-                            justify-content: center;
-                            border: 1px solid #ffffff;
-                            border-radius: 50%;
-                            padding: 5px;
-                            transition: all 0.3s ease-in;
-                        }
-                        .text {
-                            font-family: $fontFamily;
-                            font-size: 14px;
-                            line-height: 18px;
-                            color: $textColor;
-                            text-align: center;
-                            padding-top: 10px;
-                            max-width: 220px;
-                        }
                     }
-                    &:nth-child(1){
-                        input[type=radio]:checked + label {
-                            .number {
-                                border-color: $radiocolor1;
-                                color: #ffffff;
-                                background-color: $radiocolor1;
+                }
+                .value-row {
+                    width: 100%;
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: stretch; 
+                    border: 1px solid #e2e2e2;
+                    .value-item {
+                        width: 20%;
+                        min-width: 20%;
+                        font-family: $fontFamily;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: $textColor;
+                        text-align: center;
+                        padding: 10px;
+                        border-right: 1px solid #e2e2e2;
+                        label {
+                            &::before {
+                                margin: 0px !important;
                             }
                         }
-                        label .number {
-                            border-color: $radiocolor1;
-                            color: $radiocolor1;
-                            cursor: pointer;
+                        &:last-child {
+                            border-right: none;
                         }
                     }
-                    &:nth-child(2){
-                        input[type=radio]:checked + label {
-                            .number {
-                                border-color: $radiocolor2;
-                                color: #ffffff;
-                                background-color: $radiocolor2;
-                            }
-                        }
-                        label .number {
-                            border-color: $radiocolor2;
-                            color: $radiocolor2;
-                        }
-                    }
-                    &:nth-child(3){
-                        input[type=radio]:checked + label {
-                            .number {
-                                border-color: $radiocolor3;
-                                color: #ffffff;
-                                background-color: $radiocolor3;
-                            }
-                        }
-                        label .number {
-                            border-color: $radiocolor3;
-                            color: $radiocolor3;
-                        }
-                    }
-                    &:nth-child(4){
-                        input[type=radio]:checked + label {
-                            .number {
-                                border-color: $radiocolor4;
-                                color: #ffffff;
-                                background-color: $radiocolor4;
-                            }
-                        }
-                        label .number {
-                            border-color: $radiocolor4;
-                            color: $radiocolor4;
-                        }
-                    }
-                    &:nth-child(5){
-                        input[type=radio]:checked + label {
-                            .number {
-                                border-color: $radiocolor5;
-                                color: #ffffff;
-                                background-color: $radiocolor5;
-                            }
-                        }
-                        label .number {
-                            border-color: $radiocolor5;
-                            color: $radiocolor5;
-                        }
-                    }
-    
                 }
             }
         }
@@ -369,8 +302,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .container .page-content .question-block .hidden-question {
         padding-top: 10px;
     }
+    .container .page-content .question-block .scale-wrapper .label-row .label-item {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 @media screen and (max-width: 500px) {
+    .container .page-content .question-block .scale-wrapper .label-row .label-item {
+        padding: 5px 2px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .container .page-content .question-block .scale-wrapper .value-row .value-item {
+        padding: 5px;
+    }
     .container .page-content .question-block .question-list {
         padding-left: 0px;
     }
@@ -385,8 +330,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
     .container .page-content .question-block .textara-resize,
     .container .page-content .question-block .question-list .list-item input[type=radio] ~ label,
-    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label,
-    .container .page-content .question-block .radio-wrapper .radio-cont label .text {
+    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label {
         font-size: 12px;
         line-height: 14px;
     }
@@ -396,12 +340,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .container .page-content .question-block .hidden-question .hidden-name {
         padding-bottom: 5px;
     }
-    .container .page-content .question-block .radio-wrapper {
-        flex-wrap: wrap;
-        justify-content: center;
-        .radio-cont {
-            min-width: 33.3%;
-        }
+}
+@media screen and (max-width: 375px) {
+    .container .page-content .question-block .scale-wrapper .label-row .label-item {
+        font-size: 8px;
+        line-height: 10px;
     }
 }
 @media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
@@ -413,7 +356,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .container .page-content .question-block .textara-resize,
     .container .page-content .question-block .question-list .list-item input[type=radio] ~ label,
     .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label,
-    .container .page-content .question-block .radio-wrapper .radio-cont label .text,
     .container .page-content .question-block .question-name,
     .container .page-content .question-block .hidden-question .hidden-name {
         color: #ffffff;
@@ -423,12 +365,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         background: #333;
         border-color: #fff;
     }
-    .container .page-content .question-block .question-list .list-item input[type=radio] ~ label::before,
-    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label::before {
+    .container .page-content input[type=radio] ~ label::before,
+    .container .page-content input[type=checkbox] ~ label::before {
         border-color: #ffffff;
     }
-    .container .page-content .question-block .question-list .list-item input[type=radio]:checked ~ label::before,
-    .container .page-content .question-block .question-list .list-item input[type=checkbox]:checked ~ label::before {
+    .container .page-content input[type=radio]:checked ~ label::before,
+    .container .page-content input[type=checkbox]:checked ~ label::before {
         background: #ffffff;
     }
     .container .page-content .submit-block .btn-submit {
