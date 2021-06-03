@@ -321,6 +321,17 @@ body, html {
         border-color: #000;
         color: $textColor;
         height: auto;
+        font-family: $fontFamily;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        font-size: 16px;
+        color: $textColor;
+        line-height: 18px;
+        font-family: $fontFamily;
+        padding: 5px 10px;
+    }
+    .select2-container {
+        max-width: 100%;
     }
 }
 .page-thanks {
@@ -437,7 +448,11 @@ body, html {
     }
     .container .page-content .question-block .textara-resize,
     .container .page-content .question-block .question-list .list-item input[type=radio] ~ label,
-    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label {
+    .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label,
+    .select2-container .select2-selection--single,
+    .select2-container--default .select2-selection--single,
+    .select2-results__option,
+    .container .select2-container .select2-selection--single .select2-selection__rendered {
         font-size: 12px;
         line-height: 14px;
     }

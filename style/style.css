@@ -391,6 +391,19 @@ body, html {
   border-color: #000;
   color: #333;
   height: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container .select2-container .select2-selection--single .select2-selection__rendered {
+  font-size: 16px;
+  color: #333;
+  line-height: 18px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 10px;
+}
+
+.container .select2-container {
+  max-width: 100%;
 }
 
 .page-thanks {
@@ -523,7 +536,11 @@ body, html {
   }
   .container .page-content .question-block .textara-resize,
   .container .page-content .question-block .question-list .list-item input[type=radio] ~ label,
-  .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label {
+  .container .page-content .question-block .question-list .list-item input[type=checkbox] ~ label,
+  .select2-container .select2-selection--single,
+  .select2-container--default .select2-selection--single,
+  .select2-results__option,
+  .container .select2-container .select2-selection--single .select2-selection__rendered {
     font-size: 12px;
     line-height: 14px;
   }
