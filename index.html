@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АНКЕТА</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style/style.css?6734525324">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 </head>
@@ -15,7 +15,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/4service_Group.png"
+                <img src="./img/logo.svg"
                     alt="">
             </div>
         </div>
@@ -216,15 +216,17 @@
                     <div class="error-text">
                         Пожалуйста, выберите ответ
                     </div>
-                    <div class="hidden-question" id="hidden-7-1">
-                        <div class="hidden-name">
-                            Расскажете какое? <span class="smile"></span>
-                        </div>
-                        <div class="hidden-value">
-                            <input  class="hidden-input" type="text" name="q-7-3">
-                        </div>
-                        <div class="error-text">
-                            Пожалуйста, заполните поле
+                    <div class="hidden-block"  id="hidden-7-1">
+                        <div class="hidden-question">
+                            <div class="hidden-name">
+                                Расскажете какое? <span class="smile"></span>
+                            </div>
+                            <div class="hidden-value">
+                                <input  class="hidden-input" type="text" name="q-7-3">
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,15 +381,17 @@
                     <div class="error-text">
                         Пожалуйста, выберите ответ
                     </div>
-                    <div class="hidden-question" id="hidden-10-1">
-                        <div class="hidden-value">
-                            <div class="question-open">
-                                <textarea class="textara-resize hidden-input" name="q-4"
-                                    placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                    <div class="hidden-block" id="hidden-10-1">
+                        <div class="hidden-question">
+                            <div class="hidden-value">
+                                <div class="question-open">
+                                    <textarea class="textara-resize hidden-input" name="q-10-1"
+                                        placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="error-text">
-                            Пожалуйста, заполните поле
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -502,7 +506,7 @@
                 </div>
                 <div class="question-block">
                     <div class="question-name">
-                        15.	Ваш пол
+                        15.	Укажите Ваш пол
                     </div>
                     <div class="question-list ">
                         <div class="list-item">
@@ -520,33 +524,502 @@
                 </div>
                 <div class="question-block">
                     <div class="question-name">
-                        16.	Ваш возраст
+                        16.	Укажите Вашу возрастную группу
                     </div>
                     <div class="question-list ">
                         <div class="list-item">
-                            <input type="radio" name="q-16" id="q-16-1" value="18-26">
-                            <label for="q-16-1">18-26</label>
+                            <input type="radio" name="q-16" id="q-16-1" value="Менее 18 лет">
+                            <label for="q-16-1">Менее 18 лет</label>
                         </div>
                         <div class="list-item">
-                            <input type="radio" name="q-16" id="q-16-2" value="26-35">
-                            <label for="q-16-2">26-35</label>
+                            <input type="radio" name="q-16" id="q-16-2" value="18-25 лет">
+                            <label for="q-16-2">18-25 лет</label>
                         </div>
                         <div class="list-item">
-                            <input type="radio" name="q-16" id="q-16-3" value="36-45">
-                            <label for="q-16-3">36-45</label>
+                            <input type="radio" name="q-16" id="q-16-3" value="26-40 лет">
+                            <label for="q-16-3">26-40 лет</label>
                         </div>
                         <div class="list-item">
-                            <input type="radio" name="q-16" id="q-16-4" value="45-55">
-                            <label for="q-16-4">45-55</label>
+                            <input type="radio" name="q-16" id="q-16-4" value="41-55 лет">
+                            <label for="q-16-4">41-55 лет</label>
                         </div>
                         <div class="list-item">
-                            <input type="radio" name="q-16" id="q-16-5" value="56-65">
-                            <label for="q-16-5">56-65</label>
+                            <input type="radio" name="q-16" id="q-16-5" value="56 лет и старше">
+                            <label for="q-16-5">56 лет и старше</label>
                         </div>
                         <div class="list-item">
-                            <input type="radio" name="q-16" id="q-16-6" value="Свыше 65">
-                            <label for="q-16-6">Свыше 65</label>
+                            <input type="radio" name="q-16" id="q-16-6" value="Не хочу отвечать">
+                            <label for="q-16-6">Не хочу отвечать</label>
                         </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        17.	Ваше семейное положение
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-17-1"  type="radio" name="q-17" id="q-17-1" value="Не замужем / холост">
+                            <label for="q-17-1">Не замужем / холост</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-17-1"  type="radio" name="q-17" id="q-17-2" value="Женат / замужем / живем вместе">
+                            <label for="q-17-2">Женат / замужем / живем вместе</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-17-1"  type="radio" name="q-17" id="q-17-3" value="Разведен(а) / живем раздельно">
+                            <label for="q-17-3">Разведен(а) / живем раздельно</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-17-1"  type="radio" name="q-17" id="q-17-4" value="Трудно сказать">
+                            <label for="q-17-4">Трудно сказать</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-17-1"  type="radio" name="q-17" id="q-17-5" value="Живу с родными (если младше 18)">
+                            <label for="q-17-5">Живу с родными (если младше 18)</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-17-1" type="radio" name="q-17" id="q-17-6" value="Другое (запишите)">
+                            <label for="q-17-6">Другое (запишите)</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-block" id="hidden-17-1">
+                        <div class="hidden-question">
+                            <div class="hidden-value">
+                                <div class="question-open">
+                                    <textarea class="textara-resize hidden-input" name="q-17-1"
+                                        placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                                </div>
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        18. Есть ли у Вас дети?
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-18-1" type="radio" name="q-18" id="q-18-1" value="Да">
+                            <label for="q-18-1">Да</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-18-1" type="radio" name="q-18" id="q-18-2" value="Нет">
+                            <label for="q-18-2">Нет</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-block" id="hidden-18-1">
+                        <div class="hidden-question">
+                            <div class="hidden-name">
+                                Укажите количество детей в Вашей семье
+                            </div>
+                            <div class="hidden-value">
+                                <div class="question-list ">
+                                    <div class="list-item">
+                                        <input  type="radio" name="q-18-1" id="q-18-1-1"
+                                            value="1">
+                                        <label for="q-18-1-1">1</label>
+                                    </div>
+                                    <div class="list-item">
+                                        <input type="radio" name="q-18-1" id="q-18-1-2"
+                                            value="2">
+                                        <label for="q-18-1-2">2</label>
+                                    </div>
+                                    <div class="list-item">
+                                        <input type="radio" name="q-18-1" id="q-18-1-3"
+                                            value="3">
+                                        <label for="q-18-1-3">3</label>
+                                    </div>
+                                    <div class="list-item">
+                                        <input type="radio" name="q-18-1" id="q-18-1-4"
+                                            value="4">
+                                        <label for="q-18-1-4">4</label>
+                                    </div>
+                                    <div class="list-item">
+                                        <input type="radio" name="q-18-1" id="q-18-1-5"
+                                            value="5">
+                                        <label for="q-18-1-5">5</label>
+                                    </div>
+                                    <div class="list-item">
+                                        <input type="radio" name="q-18-1" id="q-18-1-6"
+                                            value="Другое">
+                                        <label for="q-18-1-6">Другое</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, выберите ответ
+                            </div>
+                        </div>
+                        <div class="hidden-question">
+                            <div class="hidden-name">
+                                Укажите возраст каждого ребенка
+                            </div>
+                            <div class="hidden-value">
+                                <div class="question-open">
+                                    <textarea class="textara-resize hidden-input" name="q-18-2"
+                                        placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                                </div>
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        19.	Кто обеспечивает материальное положение Вашей семьи?
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-19-1"  type="radio" name="q-19" id="q-19-1" value="Я сам(а)">
+                            <label for="q-19-1">Я сам(а)</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-19-1"  type="radio" name="q-19" id="q-19-2" value="Муж/жена">
+                            <label for="q-19-2">Муж/жена</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-19-1"  type="radio" name="q-19" id="q-19-3" value="Родственники">
+                            <label for="q-19-3">Родственники</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-19-1"  type="radio" name="q-19" id="q-19-4" value="41-55 лет">
+                            <label for="q-19-4">Другое (запишите)</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-block" id="hidden-19-1">
+                        <div class="hidden-question">
+                            <div class="hidden-value">
+                                <div class="question-open">
+                                    <textarea class="textara-resize hidden-input" name="q-19-1"
+                                        placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                                </div>
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        20.	Сейчас Вы увидите ряд утверждений, которые описывают различные уровни благосостояния семьи. Выберите то утверждение, которое подходит Вам больше всего
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-1" value="У нас не всегда хватает денег даже на еду ">
+                            <label for="q-20-1">У нас не всегда хватает денег даже на еду </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-2" value="У нас достаточно денег, чтобы покупать еду, но купить одежду иногда проблематично">
+                            <label for="q-20-2">У нас достаточно денег, чтобы покупать еду, но купить одежду иногда проблематично</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-3" value="У нас достаточно денег, чтобы покупать еду и одежду, но купить пылесос или микроволновую печь было бы проблематично">
+                            <label for="q-20-3">У нас достаточно денег, чтобы покупать еду и одежду, но купить пылесос или микроволновую печь было бы проблематично</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-4" value="Мы можем себе позволить купить еду, одежду и малую бытовую технику, но у нас недостаточно денег на крупную бытовую технику, как стиральная машина или холодильник">
+                            <label for="q-20-4">Мы можем себе позволить купить еду, одежду и малую бытовую технику, но у нас недостаточно денег на крупную бытовую технику, как стиральная машина или холодильник</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-5" value="Мы можем купить домашнюю технику, но у нас недостаточно денег, чтобы купить машину">
+                            <label for="q-20-5">Мы можем купить домашнюю технику, но у нас недостаточно денег, чтобы купить машину</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-6" value="У нас нет финансовых затруднений, мы можем себе позволить купить квартиру или автомобиль">
+                            <label for="q-20-6">У нас нет финансовых затруднений, мы можем себе позволить купить квартиру или автомобиль</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-20" id="q-20-7" value="Трудно сказать">
+                            <label for="q-20-7">Трудно сказать</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        21. Отметьте, какие покупки Вы делали/какие траты у Вас были за последние полгода?
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input type="checkbox" name="q-21-1" id="q-21-1" value="Покупка жилья/автомобиля">
+                            <label for="q-21-1">Покупка жилья/автомобиля</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="checkbox" name="q-21-2" id="q-21-2" value="Покупка крупной бытовой техники/электроники">
+                            <label for="q-21-2">Покупка крупной бытовой техники/электроники</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="checkbox" name="q-21-3" id="q-21-3" value="Заграничная поездка (отдых/командировки)">
+                            <label for="q-21-3">Заграничная поездка (отдых/командировки)</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="checkbox" name="q-21-4" id="q-21-4" value="Покупка одежды/обуви">
+                            <label for="q-21-4">Покупка одежды/обуви</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="checkbox" name="q-21-5" id="q-21-5" value="Покупка персональной техники (смартфоны/планшеты)">
+                            <label for="q-21-5">Покупка персональной техники (смартфоны/планшеты)</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="checkbox" name="q-21-6" id="q-21-6" value="Ничего из перечисленного">
+                            <label for="q-21-6">Ничего из перечисленного</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-21-1" type="checkbox" name="q-21-7" id="q-21-7"
+                                value="Другая покупка (укажите)">
+                            <label for="q-21-7">Другая покупка (укажите)</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-block" id="hidden-21-1">
+                        <div class="hidden-question">
+                            <div class="hidden-value">
+                                <div class="question-open">
+                                    <textarea class="textara-resize hidden-input" name="q-20-1"
+                                        placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                                </div>
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        22.	Укажите Ваш род занятий
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-1" value="Специалист (занятие, для которого требуется высшее образование)">
+                            <label for="q-22-1">Специалист (занятие, для которого требуется высшее образование)</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-2" value="Предприниматель, хозяин своего дела, фермер">
+                            <label for="q-22-2">Предприниматель, хозяин своего дела, фермер</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-3" value="Рабочий, сельскохозяйственный рабочий">
+                            <label for="q-22-3">Рабочий, сельскохозяйственный рабочий</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-4" value="Служащий (занятие, для которого не требуется высшее образование)">
+                            <label for="q-22-4">Служащий (занятие, для которого не требуется высшее образование)</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-5" value="Занят индивидуальной трудовой деятельностью">
+                            <label for="q-22-5">Занят индивидуальной трудовой деятельностью</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-6" value="Ищу работу (безработный)">
+                            <label for="q-22-6">Ищу работу (безработный)</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-7" value="Веду домашнее хозяйство">
+                            <label for="q-22-7">Веду домашнее хозяйство</label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-8" value="Не работаю (студент) ">
+                            <label for="q-22-8">Не работаю (студент) </label>
+                        </div>
+                        <div class="list-item">
+                            <input class="hide-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-9" value="Не работаю и не учусь (не ищу работу) ">
+                            <label for="q-22-9">Не работаю и не учусь (не ищу работу) </label>
+                        </div>
+                        <div class="list-item">
+                            <input class="open-hidden" data-hidden="hidden-22-1"  type="radio" name="q-22" id="q-22-10" value="Другое (запишите)">
+                            <label for="q-22-10">Другое (запишите)</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                    <div class="hidden-block" id="hidden-22-1">
+                        <div class="hidden-question">
+                            <div class="hidden-value">
+                                <div class="question-open">
+                                    <textarea class="textara-resize hidden-input" name="q-22-1"
+                                        placeholder="Напишите Ваш ответ здесь, пожалуйста" rows="1"></textarea>
+                                </div>
+                            </div>
+                            <div class="error-text">
+                                Пожалуйста, заполните поле
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        23.	Какое у Вас образование?
+                    </div>
+                    <div class="question-list ">
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-1" value="Начальное общее ">
+                            <label for="q-23-1">Начальное общее </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-2" value="Неполное среднее ">
+                            <label for="q-23-2">Неполное среднее </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-3" value="Среднее общее ">
+                            <label for="q-23-3">Среднее общее </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-4" value="Окончил ПТУ ">
+                            <label for="q-23-4">Окончил ПТУ </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-5" value="Среднее профессиональное образование (среднее специальное) ">
+                            <label for="q-23-5">Среднее профессиональное образование (среднее специальное) </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-6" value="Незаконченное высшее (3 курса вуза и выше) образование">
+                            <label for="q-23-6">Незаконченное высшее (3 курса вуза и выше) образование</label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-7" value="Высшее профессиональное образование ">
+                            <label for="q-23-7">Высшее профессиональное образование </label>
+                        </div>
+                        <div class="list-item">
+                            <input type="radio" name="q-23" id="q-23-8" value="Послевузовское профессиональное образование">
+                            <label for="q-23-8">Послевузовское профессиональное образование</label>
+                        </div>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, выберите ответ
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        24. В каком городе Вы проживаете? Если Вы проживаете в небольшом городе или в деревне, пожалуйста, назовите ближайший крупный город.
+                    </div>
+                    <div class="question-open">
+                        <textarea
+                            class="textara-resize" name="q-24" placeholder="Напишите Ваш ответ здесь, пожалуйста"
+                            data-reqired
+                            rows="1"></textarea>
+                    </div>
+                    <div class="error-text">
+                        Пожалуйста, заполните поле
+                    </div>
+                </div>
+                <div class="question-block">
+                    <div class="question-name">
+                        25.	В каком регионе Вы проживаете?
+                    </div>
+                    <div class="question-select">
+                        <select name="q-25" class="customselect">
+                            <option value="Алтайский край">Алтайский край</option>
+                            <option value="Амурская область">Амурская область</option>
+                            <option value="Архангельская область">Архангельская область</option>
+                            <option value="Астраханская область">Астраханская область</option>
+                            <option value="Белгородская область">Белгородская область</option>
+                            <option value="Брянская область">Брянская область</option>
+                            <option value="Владимирская область">Владимирская область</option>
+                            <option value="Волгоградская область">Волгоградская область</option>
+                            <option value="Вологодская область">Вологодская область</option>
+                            <option value="Воронежская область">Воронежская область</option>
+                            <option value="г. Москва">г. Москва</option>
+                            <option value="Еврейская автономная область">Еврейская автономная область</option>
+                            <option value="Забайкальский край">Забайкальский край</option>
+                            <option value="Ивановская область">Ивановская область</option>
+                            <option value="Иные территории, включая город и космодром Байконур">Иные территории, включая город и космодром Байконур</option>
+                            <option value="Иркутская область">Иркутская область</option>
+                            <option value="Кабардино-Балкарская Республика">Кабардино-Балкарская Республика</option>
+                            <option value="Калининградская область">Калининградская область</option>
+                            <option value="Калужская область">Калужская область</option>
+                            <option value="Камчатский край">Камчатский край</option>
+                            <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика</option>
+                            <option value="Кемеровская область - Кузбасс">Кемеровская область - Кузбасс</option>
+                            <option value="Кировская область">Кировская область</option>
+                            <option value="Костромская область">Костромская область</option>
+                            <option value="Краснодарский край">Краснодарский край</option>
+                            <option value="Красноярский край">Красноярский край</option>
+                            <option value="Курганская область">Курганская область</option>
+                            <option value="Курская область">Курская область</option>
+                            <option value="Ленинградская область">Ленинградская область</option>
+                            <option value="Липецкая область">Липецкая область</option>
+                            <option value="Магаданская область">Магаданская область</option>
+                            <option value="Московская область">Московская область</option>
+                            <option value="Мурманская область">Мурманская область</option>
+                            <option value="Ненецкий автономный округ">Ненецкий автономный округ</option>
+                            <option value="Нижегородская область">Нижегородская область</option>
+                            <option value="Новгородская область">Новгородская область</option>
+                            <option value="Новосибирская область">Новосибирская область</option>
+                            <option value="Омская область">Омская область</option>
+                            <option value="Оренбургская область">Оренбургская область</option>
+                            <option value="Орловская область">Орловская область</option>
+                            <option value="Пензенская область">Пензенская область</option>
+                            <option value="Пермский край">Пермский край</option>
+                            <option value="Приморский край">Приморский край</option>
+                            <option value="Псковская область">Псковская область</option>
+                            <option value="Республика Адыгея (Адыгея)">Республика Адыгея (Адыгея)</option>
+                            <option value="Республика Алтай">Республика Алтай</option>
+                            <option value="Республика Башкортостан">Республика Башкортостан</option>
+                            <option value="Республика Бурятия">Республика Бурятия</option>
+                            <option value="Республика Дагестан">Республика Дагестан</option>
+                            <option value="Республика Ингушетия">Республика Ингушетия</option>
+                            <option value="Республика Калмыкия">Республика Калмыкия</option>
+                            <option value="Республика Карелия">Республика Карелия</option>
+                            <option value="Республика Коми">Республика Коми</option>
+                            <option value="Республика Крым">Республика Крым</option>
+                            <option value="Республика Марий Эл">Республика Марий Эл</option>
+                            <option value="Республика Мордовия">Республика Мордовия</option>
+                            <option value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
+                            <option value="Республика Северная Осетия - Алания">Республика Северная Осетия - Алания</option>
+                            <option value="Республика Татарстан (Татарстан)">Республика Татарстан (Татарстан)</option>
+                            <option value="Республика Тыва">Республика Тыва</option>
+                            <option value="Республика Хакасия">Республика Хакасия</option>
+                            <option value="Ростовская область">Ростовская область</option>
+                            <option value="Рязанская область">Рязанская область</option>
+                            <option value="Самарская область">Самарская область</option>
+                            <option value="Санкт-Петербург">Санкт-Петербург</option>
+                            <option value="Саратовская область">Саратовская область</option>
+                            <option value="Сахалинская область">Сахалинская область</option>
+                            <option value="Свердловская область">Свердловская область</option>
+                            <option value="Севастополь">Севастополь</option>
+                            <option value="Смоленская область">Смоленская область</option>
+                            <option value="Ставропольский край">Ставропольский край</option>
+                            <option value="Тамбовская область">Тамбовская область</option>
+                            <option value="Тверская область">Тверская область</option>
+                            <option value="Томская область">Томская область</option>
+                            <option value="Тульская область">Тульская область</option>
+                            <option value="Тюменская область">Тюменская область</option>
+                            <option value="Удмуртская Республика">Удмуртская Республика</option>
+                            <option value="Ульяновская область">Ульяновская область</option>
+                            <option value="Хабаровский край">Хабаровский край</option>
+                            <option value="Ханты-Мансийский автономный округ - Югра">Ханты-Мансийский автономный округ - Югра</option>
+                            <option value="Челябинская область">Челябинская область</option>
+                            <option value="Чеченская Республика">Чеченская Республика</option>
+                            <option value="Чувашская Республика - Чувашия">Чувашская Республика - Чувашия</option>
+                            <option value="Чукотский автономный округ">Чукотский автономный округ</option>
+                            <option value="Ямало-Ненецкий автономный округ">Ямало-Ненецкий автономный округ</option>
+                            <option value="Ярославская область">Ярославская область</option>
+                        </select>
                     </div>
                     <div class="error-text">
                         Пожалуйста, выберите ответ
@@ -560,6 +1033,7 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

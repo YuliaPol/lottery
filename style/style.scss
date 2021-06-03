@@ -6,6 +6,7 @@ $radiocolor2: #F63030;
 $radiocolor3: #FFA400;
 $radiocolor4: #00E355;
 $radiocolor5: #008811;
+$voilet: #563BC2;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 //rest css
@@ -76,7 +77,7 @@ body, html {
     .header {
         padding: 15px 0px 35px;
         .logo {
-            width: 100px;
+            width: 200px;
             img {
                 max-width: 100%;
             }
@@ -180,6 +181,7 @@ body, html {
                 outline: none;
                 border: none;
                 border-bottom: 1px solid $circleCOlor;
+                border-radius: 0px;
                 width: 100%;
                 font-size: 16px;
                 line-height: 18px;
@@ -206,9 +208,11 @@ body, html {
                 background-repeat: no-repeat;
                 background-size: contain;
             }
+            .hidden-block {
+                display: none;
+            }
             .hidden-question {
                 padding-top: 25px;
-                display: none;
                 &.has-error {
                     .hidden-name {
                         color: #CD0800;
@@ -305,6 +309,19 @@ body, html {
             }
         }
     }
+    .select2-container .select2-selection--single,
+    .select2-container--default .select2-selection--single {
+        resize: none;
+        padding: 5px 10px;
+        outline: none;
+        width: 100%;
+        font-size: 16px;
+        line-height: 18px;
+        border-radius: 0px;
+        border-color: #000;
+        color: $textColor;
+        height: auto;
+    }
 }
 .page-thanks {
     min-height: 100%;
@@ -335,6 +352,27 @@ body, html {
             }
         }
     }
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    outline: none;
+    border-radius: 0px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+    color: #333;
+    min-height: 30px;
+}
+.select2-results__option {
+    font-family: $fontFamily;
+    font-size: 16px;
+    line-height: 20px;
+    color: $textColor;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px;
 }
 @media screen and (max-width: 1100px) {
     .page-thanks .thanks-cont .thanks-text {
