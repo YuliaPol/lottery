@@ -155,10 +155,23 @@ body, html {
   color: #333;
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container .page-content .question-block .question-name .number {
+  margin-right: 10px;
 }
 
 .container .page-content .question-block .question-list {
-  padding-left: 15px;
+  padding-left: 35px;
 }
 
 .container .page-content .question-block .question-list.flex-33 {
@@ -515,6 +528,9 @@ body, html {
 }
 
 @media screen and (max-width: 500px) {
+  .container .page-content .question-block .question-list {
+    padding-left: 25px;
+  }
   .container .page-content .question-block .scale-wrapper .label-row .label-item {
     padding: 5px 2px;
     font-size: 10px;
@@ -523,8 +539,8 @@ body, html {
   .container .page-content .question-block .scale-wrapper .value-row .value-item {
     padding: 5px;
   }
-  .container .page-content .question-block .question-list {
-    padding-left: 0px;
+  .container .page-content .question-block .question-name .number {
+    margin-right: 5px;
   }
   .container {
     padding-left: 15px;

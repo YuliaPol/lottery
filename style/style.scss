@@ -140,9 +140,15 @@ body, html {
                 padding-bottom: 15px;
                 color: $textColor;
                 transition: color 0.3s ease-in;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .number {
+                    margin-right: 10px;
+                }
             }
             .question-list {
-                padding-left: 15px;
+                padding-left: 35px;
                 &.flex-33 {
                     display: flex;
                     align-items: center;
@@ -427,6 +433,9 @@ body, html {
     }
 }
 @media screen and (max-width: 500px) {
+    .container .page-content .question-block .question-list {
+        padding-left: 25px;
+    }
     .container .page-content .question-block .scale-wrapper .label-row .label-item {
         padding: 5px 2px;
         font-size: 10px;
@@ -435,8 +444,8 @@ body, html {
     .container .page-content .question-block .scale-wrapper .value-row .value-item {
         padding: 5px;
     }
-    .container .page-content .question-block .question-list {
-        padding-left: 0px;
+    .container .page-content .question-block .question-name .number {
+        margin-right: 5px;
     }
     .container {
         padding-left: 15px;
